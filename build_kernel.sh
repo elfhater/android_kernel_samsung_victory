@@ -9,7 +9,7 @@ MKZIP='7z -mx9 -mmt=1 a "$OUTFILE" .'
 DEFCONFIG=y
 PRODUCE_TAR=n
 PRODUCE_ZIP=y
-TARGET="cyanogenmod_epicmtd_defconfig"
+TARGET="cyanogenmod_epicmtd"
 THREADS=$(expr 1 + $(grep processor /proc/cpuinfo | wc -l))
 VERSION=$(date '+%Y-%m-%d-%H.%M.%S')
 PROJECT_NAME=SPH-D700
