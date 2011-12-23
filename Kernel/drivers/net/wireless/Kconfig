@@ -7,11 +7,7 @@ menuconfig WLAN
 	depends on !S390
 	depends on NET
 	select WIRELESS
-	select WIRELESS_EXT
-	select WEXT_PRIV
-	select WEXT_CORE
-	select WEXT_SPY
-	default m
+	default y
 	---help---
 	  This section contains all the pre 802.11 and 802.11 wireless
 	  device drivers. For a complete list of drivers and documentation
@@ -272,27 +268,29 @@ config MWL8K
 	  To compile this driver as a module, choose M here: the module
 	  will be called mwl8k.  If unsure, say N.
 
-config WIMAX_VICTORY
-	tristate "select wimax module support for victory"
-	default m
-config WIMAX_GPIO_VICTORY
-	tristate "select wimax gpio module support for victory"
-	default m
-
+config WIFI_CONTROL_FUNC
+	bool "Enable WiFi control function abstraction"
+	help
+	  Enables Power/Reset/Carddetect function abstraction
 
 source "drivers/net/wireless/ath/Kconfig"
 source "drivers/net/wireless/b43/Kconfig"
 source "drivers/net/wireless/b43legacy/Kconfig"
 source "drivers/net/wireless/bcm4329/Kconfig"
+source "drivers/net/wireless/bcmdhd/Kconfig"
 source "drivers/net/wireless/hostap/Kconfig"
 source "drivers/net/wireless/ipw2x00/Kconfig"
 source "drivers/net/wireless/iwlwifi/Kconfig"
+source "drivers/net/wireless/iwlegacy/Kconfig"
 source "drivers/net/wireless/iwmc3200wifi/Kconfig"
 source "drivers/net/wireless/libertas/Kconfig"
 source "drivers/net/wireless/orinoco/Kconfig"
 source "drivers/net/wireless/p54/Kconfig"
 source "drivers/net/wireless/rt2x00/Kconfig"
+source "drivers/net/wireless/rtlwifi/Kconfig"
+source "drivers/net/wireless/wl1251/Kconfig"
 source "drivers/net/wireless/wl12xx/Kconfig"
 source "drivers/net/wireless/zd1211rw/Kconfig"
+source "drivers/net/wireless/mwifiex/Kconfig"
 
 endif # WLAN
