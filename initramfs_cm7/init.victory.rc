@@ -1,14 +1,11 @@
-on init
-# Update BOOTCLASSPATH for wimax
-export BOOTCLASSPATH /system/framework/core.jar:/system/framework/bouncycastle.jar:/system/framework/ext.jar:/system:/system/vendor/lib/wimax_service.jar
-
-#ko files for vibrator
-insmod /lib/modules/vibrator.ko
-#ko files for wimax
-insmod /lib/modules/wimax_gpio.ko
-insmod /lib/modules/cmc7xx_sdio.ko
-
 on post-fs
+
+#load vibrator modules
+insmod /system/lib/modules/vibrator.ko
+
+#load wimax modules
+insmod /system/lib/modules/cmc7xx_sdio.ko
+
 # permissions for MTP device node_temporary permission_will be changed 0660
 chmod 0660 /dev/usb_mtp_gadget 
 chown system system /dev/usb_mtp_gadget
