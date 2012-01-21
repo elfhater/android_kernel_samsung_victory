@@ -48,7 +48,7 @@ fi
 TARGET_LOCALE="vzw"
 
 #uncomment to add custom version string
-CUSTOMVERSION="Shadow-CM_v0.5"
+CUSTOMVERSION="Shadow-CM_v0.8"
 export KBUILD_BUILD_VERSION=$CUSTOMVERSION
 LOCALVERSION_STRING="-$CUSTOMVERSION"
 
