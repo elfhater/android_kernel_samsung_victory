@@ -53,8 +53,11 @@ if [ "$1" = "tw" ]; then
 	KERNEL_INITRD="$PWD/initramfs_mtd"
 elif [ "$1" = "cm" ]; then
 	KERNEL_INITRD="$PWD/initramfs_cm7"
+elif [ "$1" = "miui" ]; then
+	KERNEL_INITRD="$PWD/initramfs_miui"
+	RECOVERY_INITRD="$PWD/recovery_miui"
 else
-	echo "usage: $0 <tw|cm>"
+	echo "usage: $0 <tw|cm|miui>"
 	exit
 fi
 
