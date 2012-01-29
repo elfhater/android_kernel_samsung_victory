@@ -3,9 +3,6 @@ on post-fs
 #load vibrator modules
 insmod /lib/modules/vibrator.ko
 
-#load wimax modules
-insmod /system/lib/modules/cmc7xx_sdio.ko
-
 # permissions for MTP device node_temporary permission_will be changed 0660
 chmod 0660 /dev/usb_mtp_gadget 
 chown system system /dev/usb_mtp_gadget
