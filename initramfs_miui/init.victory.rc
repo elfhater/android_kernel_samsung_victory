@@ -1,7 +1,7 @@
 on post-fs
 
 #load vibrator modules
-insmod /system/lib/modules/vibrator.ko
+insmod /lib/modules/vibrator.ko
 
 #load wimax modules
 insmod /system/lib/modules/cmc7xx_sdio.ko
