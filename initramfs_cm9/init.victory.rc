@@ -81,11 +81,6 @@ on post-fs
   chown system input /dev/i2c-1
 
 on boot 
-  # Tweak background writeout
-  write /proc/sys/vm/dirty_writeback_centisecs 2000
-  write /proc/sys/vm/dirty_expire_centisecs 1000
-  write /proc/sys/vm/dirty_ratio 90
-
   # Fake some battery state
   setprop status.battery.state Slow
   setprop status.battery.level 5
@@ -231,6 +226,10 @@ on boot
   # For datarouter
   chown system system /dev/ttyGS0
   chown system system /dev/dun
+
+  # Set keypad delays to recommended values.
+  write /sys/devices/platform/s3c-keypad/column_delay 5
+  write /sys/devices/platform/s3c-keypad/timer_delay  5
 
 # Samsung USB Mode : system properties are linked with sysfs
 # write /sys/class/sec/switch/UsbMenuSel 0
