@@ -5304,7 +5304,7 @@ typedef struct
 	int16_t y;			/*!< Y */
 } report_finger_info_t;
 #if defined (CONFIG_MACH_FORTE)
-#define MAX_USING_FINGER_NUM    5
+#define MAX_USING_FINGER_NUM    10
 #endif
 /**
  * Additional finger status class
@@ -5322,7 +5322,7 @@ typedef struct
 } finger_status_t;
 
 //#define MAX_NUM_FINGER	10		// Maximum possible fingering
-#define MAX_USING_FINGER_NUM	5
+#define MAX_USING_FINGER_NUM	10
 #endif
 
   /* Each client has this additional data */
@@ -5387,7 +5387,7 @@ void read_all_register(void);
 static void qt602240_early_suspend(struct early_suspend *);
 static void qt602240_late_resume(struct early_suspend *);
 #endif	/* USE_TSP_EARLY_SUSPEND */
-#define MAX_USING_FINGER_NUM    5
+#define MAX_USING_FINGER_NUM    10
 
 /* Module information */
 MODULE_DESCRIPTION("AT42QT602240 Touchscreen driver");
